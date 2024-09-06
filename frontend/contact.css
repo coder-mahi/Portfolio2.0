@@ -1,0 +1,117 @@
+.contact_title {
+    margin: 10px;
+}
+
+.contact_section {
+    width: auto;
+    overflow: visible;
+}
+
+.contact-form {
+    display: grid;
+    justify-items: center;
+    place-content: center;
+    width: 100%;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 50vh; /* Adjust as needed */
+    height: 8vh;
+    margin: 2vh 0;
+    border-radius: 10px;
+    border: 2px solid #5e3bee;
+    padding: 2vh;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 15vh; /* Adjust height for textarea */
+}
+
+.contact-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    justify-items: center;
+}
+
+.contact-item-center {
+    display: grid;
+    margin: 2rem;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.contact-btn {
+    margin-top: 2vh;
+    background: white;
+    border: 1px solid #5e3bee;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #5e3bee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Poppins, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-btn:hover,
+.contact-btn:active {
+    background-color: #5e3bee;
+    color: white;
+    transform: scale(1.1);
+}
+
+.contact-btn:active {
+    opacity: .5;
+}
+
+.contact-btn:active,
+.contact-btn:hover {
+    outline: 0;
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-inputs {
+        grid-template-columns: 1fr; /* Stack inputs vertically */
+        grid-column-gap: 0; /* Remove gap */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%; /* Ensure full width on mobile */
+        max-width: none; /* Remove max-width constraint */
+        margin: 10px 0; /* Adjust margin for vertical spacing */
+    }
+
+    .contact-btn {
+        font-size: 18px; /* Adjust font size */
+        min-width: 100px; /* Adjust width */
+    }
+}

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahesh's Portfolio</title>
+  <!-- poppins font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0svlQCPdbz9juicuXnYSfYPjWxXv-zYhQQVWqnzSIZPahi5EYXJjMUzEGStcD4x" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="skill.css" />
+  <link rel="stylesheet" href="experience.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <script src="script.js"></script>
+  <script src="rounder.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OgwbZS7/BXzYznvBMqUKEhqXTl6USσσYzZtKmzPMEcySEJjGlnQSHYlPvZBulOn" crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/43dcc20e7a.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" type="image/png" href="images/ms-logo-for-tab.jpg">
+  <script>
+    
+async function submitForm() {
+  const firstname = document.getElementById('firstname').value;
+  const lastname = document.getElementById('lastname').value;
+  const email = document.getElementById('email').value;
+  const mobno = document.getElementById('mobno').value;
+  const description = document.getElementById('description').value;
+
+  try {
+    const response = await fetch('/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        firstname,
+        lastname,
+        email,
+        mobno,
+        description
+      })
+    });
+
+    if (response.ok) {
+      // Redirect to confirmation page
+      window.location.href = 'confirmation.html';
+    } else {
+      // Display error message on the same page
+      alert('There was an error with your submission.');
+    }
+  } catch (error) {
+    alert('There was an error: ' + error.message);
+  }
+}
+
+  </script>
+</head>
+
+<body>
+  <div id="root">
+    <div class="header">
+      <nav class="head">
+        <div id="navbar-container">
+          <!-- <div class="logo"> -->
+          <img class="logo" src="images/ms-logo.png" />
+          <!-- </div> -->
+          <div id="navbar-toggler" onclick="myMenu()">
+            <span class="navbar-toggler-btn"></span>
+          </div>
+          <div id="nav-items">
+            <ul id="nav-items-ul" class="nav-items-ul">
+              <li><a href="#home" class="nav-links">Home</a></li>
+              <li><a href="#skill" class="nav-links">Services</a></li>
+              <li><a href="#experience" class="nav-links">Experience</a></li>
+              <li><a href="#project" class="nav-links">Portfolio</a></li>
+              <li>
+                <a href="#contact" id="contact-btn">
+                  <button class="nav-contact-btn" role="button">Contact Me</button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+    <main class="main-wrapper">
+      <!-- @@@@Home -->
+      <header id="home" class="home_page_section">
+        <div class="page-padding">
+          <div class="container-large">
+            <div class="padding-vertical padding-huge">
+              <div class="home_page_container">
+                <div class="home_page_img_container">
+                  <div class="home_page_profile_image">
+                    <img class="profile_img" src="images/anime_img.jpg">
+                    <!-- <img class="profile_img" src="images/profile_img.png"> -->
+                  </div>
+                </div>
+                <div class="home_page_profile_detail">
+                  <div class="profile_detail">
+                    <h2 id="home_sentence">Hello, there</h2>
+                    <h2 id="home_sentence">I'm
+                    <span class="text-color-blue">Mahesh Shinde</span>
+                    </h2>
+                    <p id="home_sentence">
+                      I'm into
+                      <a href="" class="typewrite" data-period="2000"
+                        data-type='["frontend developer","Android Developer","UI/UX designer","web developer"]'
+                        style="color: red; font-weight: bold; text-decoration: none;">
+                        <span class="wrap"></span>
+                      </a>
+
+                    </p>
+                    <a href="#about" style="text-decoration: none;color: white;">
+                    <button class="home-about-button">
+                      About Me
+                    </button>
+                  </a>
+                    <br>
+                    <div class="home-social-link-container">
+                      <ul class="home-social-link">
+                        <li>
+                          <a href="https://github.com/coder-mahi" target="_blank"><img class="social-img"
+                              src="images/icons/github.png" title="github"></a>
+                        </li>
+                        <li>
+                          <a href="https://www.linkedin.com/in/mahesh-shinde-0a666b23b/" target="_blank"><img
+                              class="social-img" src="images/icons/linkedin.png" title="linkedin"></a>
+                        </li>
+                        <li>
+                          <a href="#"><img class="social-img" src="images/icons/telegram.png" title="telegram"></a>
+                        </li>
+                        <li>
+                          <a href="https://www.instagram.com/mahi_shinde01/" target="_blank"><img class="social-img"
+                              src="images/icons/instagram.png" title="instagram"></a>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+  </header>
+
+
+
+  <!-- @@@Skill -->
+  <section id="skill" class="skill_section">
+    <div class="page-padding">
+      <div class="padding-vertical padding-xhuge">
+        <div class="skill_section_title">
+          <div class="small-title">My Skills</div>
+          <div class="large-title">
+            <h2>My Expertise</h2>
+          </div>
+        </div>
+        <div class="skill_container">
+          <div class="home-skils_list-wrapper">
+            <div class="home-skils_item">
+              <div class="skils_item_icon">
+                <img src="images/icons/html.png">
+              </div>
+              <div class="skils_item_title">
+                <h3 class="heading-small">HTML</h3>
+
+              </div>
+              <p>Proficient in semantic markup and responsive design for creating well-structured web content.</p>
+            </div>
+            <div class="home-skils_item">
+              <div class="skils_item_icon">
+                <img src="images/icons/css-3.png">
+              </div>
+              <div class="skils_item_title">
+                <h3 class="heading-small">CSS</h3>
+
+              </div>
+              <p>Skilled in Flexbox, Grid layout, and animations to enhance web page styling and user experience.</p>
+            </div>
+            <div class="home-skils_item">
+              <div class="skils_item_icon">
+                <img src="images/icons/js.png">
+              </div>
+              <div class="skils_item_title">
+                <h3 class="heading-small">JAVASCRIPT</h3>
+
+              </div>
+              <p>Experienced with ES6+, DOM manipulation, and asynchronous programming for dynamic and interactive web
+                applications.</p>
+            </div>
+            <div class="home-skils_item">
+              <div class="skils_item_icon">
+                <img src="images/icons/python.png">
+              </div>
+              <div class="skils_item_title">
+                <h3 class="heading-small">PYTHON</h3>
+              </div>
+              <p>Knowledgeable in data analysis, basic Machine Learning (ML) concepts, and scripting for automation and
+                data processing tasks.</p>
+            </div>
+            <div class="home-skils_item">
+              <div class="skils_item_icon">
+                <img src="images/icons/java.png">
+              </div>
+              <div class="skils_item_title">
+                <h3 class="heading-small">JAVA</h3>
+              </div>
+              <p>Competent in Android development, Object-Oriented Programming (OOP), and multi-threading for robust
+                application development.</p>
+            </div>
+            <div class="home-skils_item">
+              <div class="skils_item_icon">
+                <img src="images/icons/c-programming.png">
+              </div>
+              <div class="skils_item_title">
+                <h3 class="heading-small">C</h3>
+              </div>
+              <p>Solid understanding of system programming and memory management for efficient and low-level
+                programming.</p>
+            </div>
+            <div class="home-skils_item">
+              <div class="skils_item_icon">
+                <img src="images/icons/sql-database.png">
+              </div>
+              <div class="skils_item_title">
+                <h3 class="heading-small">SQL</h3>
+
+              </div>
+              <p>Proficient in database design, writing complex queries, and data manipulation to manage and retrieve
+                data effectively.</p>
+            </div>
+            <div class="home-skils_item">
+              <div class="skils_item_icon">
+                <img src="images/icons/cpp.png">
+              </div>
+              <div class="skils_item_title">
+                <h3 class="heading-small">C++</h3>
+
+              </div>
+              <p>Skilled in Object-Oriented Programming (OOP), Standard Template Library (STL), and performance
+                optimization for high-efficiency applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @@@experience -->
+
+  <section id="experience" class="experience_page">
+    <div class="page-padding">
+      <div class="padding-vertical padding-xhuge">
+        <div class="experience_section_title">
+          <div class="small-title">Experience</div>
+          <div class="large-title">
+            <h2>My Experiences</h2>
+          </div>
+        </div>
+        <div class="experience_container">
+          <h1>INTERNSHIPS</h1>
+          <ul>
+            <li style="--accent-color:#41516C">
+              <div class="date">May 2022</div>
+              <div class="title">Basics of ML with Python internship</div>
+              <div class="descr">
+                Company: <b>BeyonDegree Pvt. Ltd</b>
+                <br>
+                Year: <b>2023</b>
+                <hr>
+                During my internship at BeyonDegree Pvt. Ltd, I gained foundational knowledge in Machine Learning
+                using Python. This experience provided me with a solid understanding of essential ML concepts and
+                techniques, including:
+                <br>
+                <b>
+                  Data Preprocessing
+                  <br>Supervised and Unsupervised Learning
+                  <br>Python Libraries:</b> NumPy, pandas, and Matplotlib for data manipulation and visualization.
+              </div>
+            </li>
+            <li style="--accent-color:#FBCA3E">
+              <div class="date">April 2023</div>
+              <div class="title">Web Development</div>
+              <div class="descr">
+                Company: <b>CodeClause</b>
+                <br>
+                Year: <b>2023</b>
+                <hr>
+                During my web development internship at CodeClause, I worked on both front-end and back-end development
+                projects. This role allowed me to develop a comprehensive skill set in web technologies:
+                <br>
+                <b>
+                Front-End Development
+                <br>
+                Back-End Development
+                <br>Frameworks:</b>React and Bootstrap to streamline development processes.
+                <br>
+                <b>Collaboration
+                <br>Problem-Solving:
+              </b>Addressed various development challenges and optimized website performance and user
+                experience.
+                
+              </div>
+            </li>
+            <li style="--accent-color:#E24A68">
+              <div class="date">June 2023</div>
+              <div class="title">Android Application Developement</div>
+              <div class="descr">
+                Company: <b>ATJOIN Pvt. Ltd</b>
+                <br>
+                Year: <b>2023</b>
+                <hr>
+                During my internship at ATJOIN Pvt. Ltd, I focused on developing and maintaining Android applications.
+                This role allowed me to enhance my skills in several key areas:
+                <br>
+                <b>App Development</b>
+                <br>
+                <b>UI/UX Design</b>
+                <br>
+                <b>API Integration</b>
+                <br>
+                <b>Debugging and Testing</b>
+              </div>
+            </li>
+
+            <!-- <li style="--accent-color:#1B5F8C">
+              <div class="date">2024</div>
+              <div class="title">Title 4</div>
+              <div class="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
+            </li>
+            <li style="--accent-color:#4CADAD">
+              <div class="date">2022</div>
+              <div class="title">Title 5</div>
+              <div class="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+  </section>
+
+  <!-- @@@project -->
+  <section id="project" class="project_section_page">
+    <div class="page-padding">
+      <div class="padding-vertical padding-xhuge">
+        <div class="project_section_title">
+          <div class="small-title">Recent Projects</div>
+          <div class="large-title">
+            <h2>Portfolio</h2>
+          </div>
+        </div>
+        <div class="project_container">
+          <div class="project_list-wrapper">
+            <div class="project_item">
+              <div class="project_item_image">
+                <img src="images/icons/android.png">
+
+              </div>
+              <div class="project_item_title">
+                <h3 class="heading-small">Memo Application</h3>
+              </div>
+              <p>Developed a Memo application in Android with features for note-taking, organization, and reminders using Java and XML.</p>
+              <div class="project_visit_link">
+                <a href="https://github.com/coder-mahi?tab=repositories" target="_blank">
+                  visit project
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project_item">
+              <div class="project_item_image">
+                <img src="images/icons/android.png">
+
+              </div>
+              <div class="project_item_title">
+                <h3 class="heading-small">YouTube to MP3 Converter</h3>
+              </div>
+              <p>Developed a YouTube to MP3 converter Android app using an API with JavaScript for seamless audio extraction and conversion.</p>
+              <div class="project_visit_link">
+                <a href="https://github.com/coder-mahi?tab=repositories" target="_blank">
+                  visit project
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project_item">
+              <div class="project_item_image">
+                <img src="images/icons/android.png">
+
+              </div>
+              <div class="project_item_title">
+                <h3 class="heading-small">Student Mentoring Application</h3>
+
+              </div>
+              <p>Developed a student mentoring application in Android to connect students with mentors, featuring chat, scheduling, and progress tracking.</p>
+              <div class="project_visit_link">
+                <a href="https://github.com/coder-mahi?tab=repositories" target="_blank">
+                  visit project
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project_item">
+              <div class="project_item_image">
+                <img src="images/icons/html.png">
+
+              </div>
+              <div class="project_item_title">
+                <h3 class="heading-small">Portfolio Website</h3>
+
+              </div>
+              <p>Developed a portfolio website showcasing projects and skills, featuring responsive design, interactive elements, and smooth navigation using HTML, CSS, and JavaScript.</p>
+              <div class="project_visit_link">
+                <a href="https://github.com/coder-mahi?tab=repositories" target="_blank">
+                  visit project
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @@@about -->
+
+  <section id="about" class="about_section">
+    <div class="page-padding">
+      <div class="padding-vertical padding-xhuge">
+        <div class="project_section_title">
+          <div class="small-title">About</div>
+          <div class="large-title">
+            <h2>About Me</h2>
+          </div>
+        </div>
+        <div class="about_container">
+          <div class="about_container_section1">
+            <div class="about_img"></div>
+          </div>
+          <div class="about_container_section2">
+            <div class="about_info">
+              <h1>I'm Mahesh</h1>
+              <h1 class="about_full">Android Developer</h1>
+              <p>I am Mahesh Shinde, a versatile developer with expertise in frontend development, UI/UX design, and
+                Android development. With a diploma in Computer Technology, I have a strong foundation in various
+                programming languages and technologies.
+              </p>
+              <div class="about_contact_details">
+                <p class="about_info_detail"><span class="blue_color">Age:</span>18</p>
+                <p class="about_info_detail"><span class="blue_color">Email:</span>maheshshinde9100@gmail.com</p>
+                <p class="about_info_detail"><span class="blue_color">place:</span>Yeola</p>
+                <p class="about_info_detail"><span class="blue_color">Phone:</span>+919529544681</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @@@contact -->
+  <section id="contact" class="contact_section">
+    <div class="page-padding">
+        <div class="padding-vertical padding-xhuge">
+            <div class="contact_section_title">
+                <div class="small-title contact-title1">Contact</div>
+                <div class="large-title contact-title2">
+                    <h2>Contact Form</h2>
+                </div>
+            </div>
+            <div class="contact_section_container">
+                <div class="contact-form">
+                  <form action="/contact" method="POST">
+                    <div class="contact-inputs">
+                      <div>
+                        <label for="firstname" class="label-wrapper">
+                          <span class="label-text">First Name:</span>
+                        </label>
+                        <input type="text" name="firstname" placeholder="first name" autocomplete="on" required>
+                      </div>
+                      <div>
+                        <label for="lastname" class="label-wrapper">
+                          <span class="label-text">Last Name:</span>
+                        </label>
+                        <input type="text" name="lastname" placeholder="last name" autocomplete="on" required>
+                      </div>
+                      <div>
+                        <label for="email" class="label-wrapper">
+                          <span class="label-text">Email Address:</span>
+                        </label>
+                        <input type="email" name="email" placeholder="xyz@email.com" autocomplete="on" required>
+                      </div>
+                      <div>
+                        <label for="mobno" class="label-wrapper">
+                          <span class="label-text">Mobile No:</span>
+                        </label>
+                        <input type="number" name="mobno" placeholder="mobile no" autocomplete="on" required>
+                      </div>
+                    </div>
+                    <div class="contact-item-center">
+                      <label for="description" class="label-wrapper">
+                        <span class="label-text">Description:</span>
+                      </label>
+                      <textarea name="description" placeholder="description" spellcheck="true"></textarea>
+                      <button class="contact-btn" role="button" type="submit"><span class="text">Submit</span></button>
+                    </div>
+                  </form>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  </main>
+
+  <!-- @@@footer -->
+
+  <footer class="footer">
+    <div class="footer-detail section1">
+      <h3>Mahesh_Portfolio</h3>
+      <p class="thanks">
+        Thank you for visiting my personal portfolio website. Connect with
+        me over socials.
+      </p>
+
+      <p class="keep">
+        Keep Rising ??. Connect with me over live chat!
+      </p>
+    </div>
+    <div class="footer-detail section2">
+      <h3>Quick Links</h3>
+      <ul>
+        <a href="#home">
+          <li><img src="images/footer-icons/black-home-icon.png">
+            Home
+        </a></li>
+        <li>
+          <a href="#about">
+            <img src="images/footer-icons/black-info-icon.png">
+            About</a>
+        </li>
+        <li>
+          <a href="#skill">
+            <img src="images/footer-icons/black-skills-icon.png">
+            Services</a>
+        </li>
+        <li>
+          <a href="#experience">
+            <img src="images/footer-icons/black-experiences-icon.png">
+            Experience</a>
+        </li>
+        <li>
+          <a href="#project">
+            <img src="images/footer-icons/black-projects-icon.png">Projects</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-detail section3">
+      <h3>Contact Info</h3>
+      <div class="footer-contact-info">
+        <img src="images/footer-icons/black-contact-icon.png">
+        <p>+919529544681</p>
+      </div>
+      <div class="footer-contact-info">
+        <img src="images/footer-icons/email.png">
+        <p>maheshshinde9100@gmail.com</p>
+      </div>
+      <div class="footer-contact-info">
+        <img src="images/footer-icons/location.png">
+        <p>Yeola-India-423402</p>
+      </div>
+      <ul class="social-link">
+        <li>
+          <div class="footer-social-item">
+            <img src="images/footer-icons/circular-github.png">
+            <a href="https://github.com/coder-mahi" target="_blank">
+              <h4>GitHub</h4>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="footer-social-item">
+            <img src="images/footer-icons/circular-linkedin.png">
+            <a href="#">
+              <h4>LinkedIn</h4>
+            </a>
+        </li>
+        <li>
+          <div class="footer-social-item">
+            <img src="images/footer-icons/circular-fb.png">
+            <a href="#">
+              <h4>Facebook</h4>
+            </a>
+        </li>
+        <li>
+          <div class="footer-social-item">
+            <img src="images/footer-icons/circular-instagram.png">
+            <a href="#">
+              <h4>Instagram</h4>
+            </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-detail section4">
+      <div class="container">
+        <div class="search-box">
+          <input type="text" class="search-input" placeholder="search here..">
+
+          <button class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+</body>
+</html>
