@@ -1,1 +1,1 @@
-My Portfolio website
+This repository contains the source code for my personal portfolio website. It showcases my skills in Android and web development, with sections for projects, services, experience, and more. Built using modern web technologies to highlight my professional journey and expertise.
