@@ -115,3 +115,48 @@
         min-width: 100px; /* Adjust width */
     }
 }
+
+
+
+.resume-btn{
+    margin-top: 2vh;
+    background: white;
+    border: 1px solid #5e3bee;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #5e3bee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Poppins, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    transition: transform 0.3s ease-in-out;
+}
+
+.resume-btn:hover,
+.resume-btn:active {
+    background-color: #5e3bee;
+    color: white;
+    transform: scale(1.1);
+}
+
+.resume-btn:active {
+    opacity: .5;
+}
+
+.resume-btn:active,
+.resume-btn:hover {
+    outline: 0;
+}
