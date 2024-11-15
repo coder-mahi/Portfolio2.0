@@ -11,144 +11,8 @@
 .project_section_page h2{
     text-align: left;
 }
-/*
-.project_container {
-  width: 100%;
-  margin: 0;
-  border-radius: 10px;
-  width: auto;
-  height: 100vh;
-  text-align: center;
-  align-content: top;
-  display: flex;
-  justify-content: space-around;
-  background-color: aqua;
-}
- .project_section1 {
-  width: 100%;
-  height: 100%;
-  font-size: 1.2em;
-  align-content: center;
-}
-.project_section2 {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-  font-size: 1.2em;
-  align-content: center;
-} */
-
-/* Project cards */
-/* .wrapper {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container {
-  height: 400px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: start;
-}
-
-.card {
-  width: 80px;
-  border-radius: 0.75rem;
-  background-size: cover;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 2rem;
-  margin: 0 10px;
-  display: flex;
-  align-items: flex-end;
-  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
-  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
-}
-
-.card > .row {
-  color: white;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.card > .row > .icon {
-  background: #223;
-  color: white;
-  border-radius: 50%;
-  width: 50px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-}
-
-.card > .row > .description {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  height: 80px;
-  width: 520px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition-delay: 0.3s;
-  transition: all 0.3s ease;
-}
-
-.description p {
-  color: #b0b0ba;
-  padding-top: 5px;
-}
-
-.description h4 {
-  text-transform: uppercase;
-}
-.description a {
-  color: white;
-  text-decoration: none;
-}
-
-.container input {
-  display: none;
-}
-
-input:checked + label {
-  width: 600px;
-}
-
-input:checked + label .description {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-.card[for="c1"] {
-  background-image: url("/frontend/images/banner-bg.png");
-}
-.card[for="c2"] {
-  background-image: url("/frontend/images/anime_img.jpg");
-}
-.card[for="c3"] {
-  background-image: url("/frontend/images/bg_img.jpg");
-}
-.card[for="c4"] {
-  background-image: url("/frontend/images/bg_img.jpg");
-} */
-
-
 /* new code */
-.project_list-wrapper {
-  /* grid-column-gap: 2rem;
-  grid-row-gap: 4rem;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-columns: 1fr;
-  align-items: start;
-  justify-items: start;
-  display: grid; */
-
+.project-list-wrapper {
   height: auto;
   grid-column-gap: 2rem;
   display: flex;
@@ -157,15 +21,7 @@ input:checked + label .description {
   flex-wrap: wrap;
   gap: 50px;
 }
-.project_item {
-  /* background-color: #f5fcff;
-  border-radius: .5rem;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 1.5rem;
-  transition: all .2s ease-in-out; */
-
+.project-item {
   width: 230px;
   height: fit-content;
   background-color: #f5fcff;
@@ -179,10 +35,8 @@ input:checked + label .description {
               rgba(0, 0, 0, 0.23) 0px 6px 6px;
   cursor: pointer;
   transition: all .2s ease-in-out;
-
-
 }
-.project_item_image{
+.project-item-image{
 margin-top: 0;
 margin-left: 0;
 margin-right: 0;
@@ -190,13 +44,13 @@ margin-right: 0;
   display: grid;
   place-content: center;
 }
-.project_item_image img{
+.project-item-image img{
   vertical-align:top;
   max-width: 100%;
   border: 0;
   width: 20vh;
 }
-.project_item_title{
+.project-item-title{
   margin-top: 0;
 margin-left: 0;
 margin-right: 0;
@@ -207,11 +61,11 @@ font-size: 1.5rem;
 font-weight: 700;
 line-height: 1.4;
 }
-.project_item:hover{
+.project-item:hover{
   box-shadow: 5px 5px 10px #5e3bee;
 }
 
-.project_visit_link{
+.project-visit-link{
   margin-top: 1.5rem;
   text-decoration: underline;
   font-weight: 500;
