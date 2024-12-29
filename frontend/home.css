@@ -198,69 +198,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* @media screen and (max-width: 900px) {
-  .home_page_profile_detail {
-    font-size: 2em;
-  }
-} */
-/* @media screen and (max-width: 750px) {
-  .home_page_profile_detail {
-    top: 30vh;
-    font-size: 1.4em;
-  }
-  .home_page_profile_image {
-    width: 40vh;
-    height: 40vh;
-    top: 0vh;
-    right: 8vh;
-  }
-  .profile_img {
-    width: 38vh;
-    height: 38vh;
-  }
-  .home_about_btn {
-    font-size: 1em;
-    width: 30vh;
-  }
-  .social_media_btn {
-    width: 20vh;
-    margin: 3px;
-    font-size: 0.6em;
-  }
-}
-@media screen and (max-width: 500px) {
-  .home_page_profile_detail {
-    font-size: 1.4em;
-    left: 5vh;
-  }
-  .home_page_profile_image {
-    width: 40vh;
-    height: 40vh;
-    left: 30%;
-  }
-  .social_media_btn {
-    width: 5vh;
-    height: 5vh;
-  }
-  .profile_img {
-    width: 38vh;
-    height: 38vh;
-  }
-  .home_about_btn {
-    font-size: 1em;
-    width: 30vh;
-  }
-} */
-/* @media screen and (max-width: 500px) {
-  .home_page_profile_detail {
-    font-size: 1.1em;
-  }
-} */
- @media  screen and (max-width:1440px){
- 
-  
- }
-
 @media screen and (max-width: 768px) {
   .home_page_container {
     grid-template-columns: repeat(2, 1fr);
@@ -313,13 +250,6 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
-.home-social-link-container{
-  /* width: 100%;
-  height: 100%;
-  display: grid;
-  place-content: center; */
-
-}
   .home-social-link {
     width: 100%;
     height: 100%;
