@@ -1,51 +1,35 @@
-  // Get references to the prev, next buttons and the carousel container
-  const prevButton = document.querySelector('.prev-btn');
-  const nextButton = document.querySelector('.next-btn');
-  const carouselContainer = document.querySelector('.carousel-container');
-  
-  let index = 0; // Initialize the index of the current carousel item
-  
-  const items = document.querySelectorAll('.carousel-item');
-  const totalItems = items.length;
-  
-  // Function to move to the previous item
-  prevButton.addEventListener('click', () => {
-    if (index > 0) {
-      index--; // Move left
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const carouselContainer = document.querySelector('.carousel-container');
+const items = document.querySelectorAll('.carousel-item');
+let currentIndex = 0;
+
+function showNext() {
+    if (currentIndex < items.length - 1) {
+        currentIndex++;
     } else {
-      index = totalItems - 1; // Loop back to the last item
+        currentIndex = 0;
     }
     updateCarousel();
-  });
+}
 
-  // Function to move to the next item
-  nextButton.addEventListener('click', () => {
-    if (index < totalItems - 1) {
-      index++; // Move right
+function showPrev() {
+    if (currentIndex > 0) {
+        currentIndex--;
     } else {
-      index = 0; // Loop back to the first item
+        currentIndex = items.length - 1;
     }
     updateCarousel();
-  });
+}
 
-  // Update the carousel position based on the current index
-  function updateCarousel() {
-    const offset = -index * 100; // Move the container by 100% per item
+function updateCarousel() {
+    const offset = -currentIndex * 100;
     carouselContainer.style.transform = `translateX(${offset}%)`;
-  }
+}
 
-  // Optional: Auto slide functionality (you can remove this if you prefer manual control only)
-  let autoSlide = setInterval(() => {
-    nextButton.click(); // Automatically click the next button every 3 seconds
-  }, 3000);
+// Event listeners for next and prev buttons
+nextBtn.addEventListener('click', showNext);
+prevBtn.addEventListener('click', showPrev);
 
-  // Optionally: Pause the carousel on hover
-  carouselContainer.addEventListener('mouseenter', () => {
-    clearInterval(autoSlide);
-  });
-
-  carouselContainer.addEventListener('mouseleave', () => {
-    autoSlide = setInterval(() => {
-      nextButton.click();
-    }, 3000); // Auto slide every 3 seconds
-  });
+// Optional: Auto-rotate carousel every 5 seconds
+setInterval(showNext, 4000);

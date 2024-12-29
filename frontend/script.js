@@ -31,4 +31,10 @@ async function submitForm() {
     alert('There was an error: ' + error.message);
   }
 }
-   
+// navbar
+function myMenu() {
+	var navItems = document.getElementById("nav-items-ul");
+	var togglerBtn = document.querySelector(".navbar-toggler-btn");
+	  navItems.classList.toggle("nav-items-height");
+	  togglerBtn.classList.toggle("navbar-toggler-btn-x");
+  }
