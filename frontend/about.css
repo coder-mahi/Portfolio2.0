@@ -34,11 +34,11 @@
 }
 .about_img:hover {
   transform: scale(1.03);
-  box-shadow: 0px 10px 50px #5e3bee;
+  box-shadow: 0px 40px 50px #5e3bee;
 }
 .about_info:hover {
   transform: scale(1.03);
-  text-shadow: 2px 5px 40px #5e3bee;
+  text-shadow: 0px 40px 50px #5e3bee;
 }
 .about_info {
   /* background-color: darkcyan; */
@@ -53,7 +53,7 @@
   transition: transform 0.3s ease-in-out;
 }
 .about_info h1 {
-  text-align: justify;
+  text-align: left;
 }
 .about_info p {
   margin: 0;
@@ -67,6 +67,9 @@ p.about_info_detail {
   text-transform: math-auto;
 }
 @media screen and (max-width: 768px) {
+  .about_info h1 {
+    text-align: center;
+  }
   .about_container {
     width: auto;
     height: auto;
@@ -87,8 +90,8 @@ p.about_info_detail {
     height: auto; /* Let content determine the height */
   }
   .about_img {
-    height: 36vh;
-    max-width: 30vh; /* Ensure the image scales properly */
+    height: 38vh;
+    max-width: 32vh; /* Ensure the image scales properly */
     margin: 0 auto; /* Center the image horizontally */
   }
   .about_info {

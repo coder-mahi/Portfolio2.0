@@ -151,6 +151,24 @@
     gap: 2rem;
     margin-bottom: 2.5rem;
 }
+.leetcode-stats {
+    display: flex;
+    row-gap: 20px;
+    flex-direction: column;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically, if needed */
+    overflow: hidden; /* Avoid overflow issues */
+    max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
+    padding: 1rem; /* Optional padding for spacing */
+}
+
+.leetcode-stats img {
+    max-width: 100%; /* Restrict the image to the container's width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 0.5rem; /* Optional rounded corners for aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visuals */
+}
+
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
     .coding-achievements_container {
@@ -160,6 +178,10 @@
 
     .coding-achievements_info {
         padding: 1.5rem;
+    }
+    .coding-achievements_badge{
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -203,8 +225,9 @@
     }
 
     .coding-achievements_badge {
-        width: 35px;
-        height: 35px;
+        width: 90px;
+        height: 90px;
+        margin-bottom: 20px;
     }
     .coding-achievements_badge:hover{
         transform: scale(1.3);
