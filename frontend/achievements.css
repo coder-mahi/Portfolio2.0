@@ -78,7 +78,7 @@
 
 .coding-achievements_info {
     padding: 2rem;
-    background-color: #ffffff;
+    background-color: #f5fcff;
     border-radius: 1rem;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -178,9 +178,14 @@
     }
 
     .coding-achievements_badge {
-        width: 40px;
-        height: 40px;
+        width: 90px;
+        height: 90px;
+        margin-bottom: 20px;
     }
+    .coding-achievements_badge:hover {
+        transform: scale(1.3);
+    }
+        
 }
 
 @media (max-width: 480px) {
@@ -193,12 +198,15 @@
     }
 
     .coding-achievements_logo {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
 
     .coding-achievements_badge {
         width: 35px;
         height: 35px;
+    }
+    .coding-achievements_badge:hover{
+        transform: scale(1.3);
     }
 }
