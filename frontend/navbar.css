@@ -112,7 +112,9 @@
 .nav-contact-btn:active {
   background-color: initial;
   background-position: 0 0;
-  color: #5e3bee;
+  color: #5e3bee; 
+  background-color: #FFFFFF; 
+  border: #5e3bee 1px solid;
   
 }
 
@@ -122,7 +124,7 @@
 
 .nav-resume-btn {
   background: #5e3bee;
-  border: 1px solid #FFFFFF;
+  border: none;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   box-sizing: border-box;
