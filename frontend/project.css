@@ -21,7 +21,7 @@
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   text-align: center;
   padding: 20px;
-  background-color: #f5fcff;
+  background-color: #636363;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
@@ -93,29 +93,24 @@
   }
 }
 
-/* Unique background images for each project */
-.carousel-item:nth-child(1) {
-  /* background-image: url('images/nature_bg1.jpg'); */
+/* .carousel-item:nth-child(1) {
   background-color: #5e3bee;
 }
 
 .carousel-item:nth-child(2) {
-  /* background-image: url('images/nature_bg1.jpg'); */
   background-color: #5e3bee;
 
 }
 
 .carousel-item:nth-child(3) {
-  /* background-image: url('images/nature_bg1.jpg'); */
   background-color: #5e3bee;
 
 }
 
 .carousel-item:nth-child(4) {
-  /* background-image: url('images/nature_bg1.jpg'); */
   background-color: #5e3bee;
 
-}
+} */
 
 /* You can also apply additional styles to ensure text visibility depending on your background */
 .carousel-item:nth-child(1),
