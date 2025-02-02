@@ -36,10 +36,10 @@
   transform: scale(1.03);
   box-shadow: 0px 40px 50px #5e3bee;
 }
-.about_info:hover {
+/* .about_info:hover {
   transform: scale(1.03);
   text-shadow: 0px 40px 50px #5e3bee;
-}
+} */
 .about_info {
   /* background-color: darkcyan; */
   width: 90vh;
